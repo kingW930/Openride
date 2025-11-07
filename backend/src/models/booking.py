@@ -1,5 +1,5 @@
 """
-Booking model for OpenSeat platform
+Booking model for OpenRide platform
 """
 from sqlalchemy import Column, String, Integer, Float, DateTime, ForeignKey, Enum as SQLEnum
 from sqlalchemy.orm import relationship

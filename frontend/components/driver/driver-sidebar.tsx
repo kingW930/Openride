@@ -37,7 +37,7 @@ export default function DriverSidebar({ activeTab, setActiveTab }: any) {
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">OS</span>
             </div>
-            <span className="font-bold text-lg">OpenSeat</span>
+            <span className="font-bold text-lg">OpenRide</span>
           </div>
 
           {/* Navigation */}

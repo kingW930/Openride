@@ -1,6 +1,6 @@
-# OpenSeat Backend
+# OpenRide Backend
 
-FastAPI backend for the OpenSeat rideshare platform - a community-powered micro-ridesharing platform for daily work commutes.
+FastAPI backend for the OpenRide rideshare platform - a community-powered micro-ridesharing platform for daily work commutes.
 
 ## Features
 
@@ -70,11 +70,11 @@ pip install -r requirements.txt
 
 ```bash
 # Create PostgreSQL database
-createdb openseat_db
+createdb openride_db
 
 # Or using psql:
 psql -U postgres
-CREATE DATABASE openseat_db;
+CREATE DATABASE openride_db;
 \q
 ```
 

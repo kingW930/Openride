@@ -20,7 +20,7 @@ export default function Navbar() {
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center animate-pulse-subtle">
             <span className="text-white font-bold text-lg">OS</span>
           </div>
-          <span className="font-bold text-xl hidden sm:inline">OpenSeat</span>
+          <span className="font-bold text-xl hidden sm:inline">OpenRide</span>
         </div>
 
         {/* Desktop Navigation */}

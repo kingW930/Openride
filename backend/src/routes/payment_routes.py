@@ -40,7 +40,7 @@ async def initiate_payment(
     Returns payment parameters for frontend Interswitch Web Checkout integration:
     - merchant_code: Interswitch merchant code
     - pay_item_id: Payment item ID
-    - txn_ref: Unique transaction reference (OPENSEAT-timestamp-randomId)
+    - txn_ref: Unique transaction reference (OPENRIDE-timestamp-randomId)
     - amount: Amount in kobo (Naira * 100)
     - currency: 566 (NGN currency code)
     - mode: TEST or LIVE

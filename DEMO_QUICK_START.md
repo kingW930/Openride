@@ -1,4 +1,4 @@
-# 🚀 OpenSeat Demo - Quick Start Guide
+# 🚀 OpenRide Demo - Quick Start Guide
 
 ## ✅ Zero Configuration Setup
 
@@ -22,7 +22,7 @@ This creates:
 - ✅ 3 test drivers
 - ✅ 3 vehicles
 - ✅ 6 active routes
-- ✅ SQLite database file (openseat_demo.db)
+- ✅ SQLite database file (openride_demo.db)
 
 ## 🚀 Step 3: Start Backend
 
@@ -101,7 +101,7 @@ Popular routes in database:
 cd backend
 
 # Check if database exists
-ls openseat_demo.db
+ls openride_demo.db
 
 # If not, run seed script
 python seed_demo_data.py
@@ -128,11 +128,11 @@ python seed_demo_data.py
 ## 📂 Project Structure
 
 ```
-openseat/
+openride/
 ├── backend/
 │   ├── main.py                  # FastAPI entry point
 │   ├── seed_demo_data.py        # Database seeder
-│   ├── openseat_demo.db         # SQLite database (auto-created)
+│   ├── openride_demo.db         # SQLite database (auto-created)
 │   ├── requirements.txt         # Python dependencies
 │   └── src/
 │       ├── config/              # Settings & database

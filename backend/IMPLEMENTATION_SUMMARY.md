@@ -1,7 +1,7 @@
-# OpenSeat Backend - Implementation Summary
+# OpenRide Backend - Implementation Summary
 
 ## Overview
-Complete FastAPI backend for OpenSeat rideshare platform with advanced features for hackathon demo.
+Complete FastAPI backend for OpenRide rideshare platform with advanced features for hackathon demo.
 
 ## ✅ Completed Features
 
@@ -19,7 +19,7 @@ Complete FastAPI backend for OpenSeat rideshare platform with advanced features 
 - Token expiry: 1440 minutes (24 hours)
 
 ### 3. Interswitch Payment Integration (Prompt 2)
-✅ **Transaction Reference Format**: `OPENSEAT-{timestamp}-{randomId}`
+✅ **Transaction Reference Format**: `OPENRIDE-{timestamp}-{randomId}`
 ✅ **Kobo Conversion**: Proper Naira to kobo conversion (×100)
 ✅ **Payment Initialization**: Returns all required parameters for frontend
 ✅ **Payment Verification**: Calls Interswitch API for transaction verification
@@ -34,7 +34,7 @@ Complete FastAPI backend for OpenSeat rideshare platform with advanced features 
 
 **Key Functions**:
 ```python
-generate_transaction_ref() → "OPENSEAT-1699123456-abc123def"
+generate_transaction_ref() → "OPENRIDE-1699123456-abc123def"
 convert_to_kobo(1500.00) → 150000
 initiate_payment() → PaymentInitializeResponse with test card
 verify_payment() → Calls Interswitch API, updates booking
@@ -297,7 +297,7 @@ httpx==0.25.2
 ### 1. Payment Flow
 ```
 1. Rider books route → POST /api/bookings
-2. System generates OPENSEAT transaction reference
+2. System generates OPENRIDE transaction reference
 3. Frontend receives payment params with test card
 4. Frontend shows Interswitch modal
 5. User enters test card details
@@ -423,4 +423,4 @@ INTERSWITCH_QUERY_URL=https://webpay.interswitchng.com/collections/api/v1/gettra
 - [ ] Machine learning model training from booking data
 
 ---
-**Built for OpenSeat Hackathon** | **All Prompts Implemented** ✅
+**Built for OpenRide Hackathon** | **All Prompts Implemented** ✅

@@ -1,5 +1,5 @@
 """
-Payment model for OpenSeat platform
+Payment model for OpenRide platform
 """
 from sqlalchemy import Column, String, Float, DateTime, ForeignKey, Enum as SQLEnum
 from sqlalchemy.orm import relationship

@@ -82,7 +82,7 @@ export default function DriverProfile() {
             <Mail className="w-5 h-5 text-primary" />
             <div>
               <p className="text-sm text-muted-foreground">Email</p>
-              <p className="font-semibold">chidi@openseat.ng</p>
+              <p className="font-semibold">chidi@openride.ng</p>
             </div>
           </div>
         </div>

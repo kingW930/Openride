@@ -31,7 +31,7 @@ class PaymentInitializeResponse(BaseModel):
             "example": {
                 "merchant_code": "MX007",
                 "pay_item_id": "101007",
-                "txn_ref": "OPENSEAT-20231107120000-ABC123",
+                "txn_ref": "OPENRIDE-20231107120000-ABC123",
                 "amount": 150000,
                 "currency": 566,
                 "mode": "TEST",

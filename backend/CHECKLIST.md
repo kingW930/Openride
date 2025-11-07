@@ -1,4 +1,4 @@
-# OpenSeat Backend - Final Checklist ✅
+# OpenRide Backend - Final Checklist ✅
 
 ## ✅ All Prompts Implemented
 
@@ -16,7 +16,7 @@
 - [x] README with setup instructions
 
 ### ✅ Prompt 2: Interswitch Payment Integration
-- [x] Transaction reference format: `OPENSEAT-{timestamp}-{randomId}`
+- [x] Transaction reference format: `OPENRIDE-{timestamp}-{randomId}`
 - [x] `generate_transaction_ref()` function using secrets.token_hex
 - [x] `convert_to_kobo()` and `convert_from_kobo()` functions
 - [x] `initiate_payment()` returns all required parameters

@@ -1,6 +1,6 @@
-# OpenSeat - Community Rideshare Platform for Nigerian Commuters
+# OpenRide - Community Rideshare Platform for Nigerian Commuters
 
-A modern, production-ready web application for hassle-free ridesharing in Lagos. OpenSeat connects drivers and riders with AI-powered route matching, blockchain verification, and seamless payments.
+A modern, production-ready web application for hassle-free ridesharing in Lagos. OpenRide connects drivers and riders with AI-powered route matching, blockchain verification, and seamless payments.
 
 ## Key Features
 

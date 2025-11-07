@@ -140,7 +140,7 @@ function BookingToken({ booking }: { booking: BookingWithToken }) {
       
       {/* Blockchain Explorer Link */}
       <a 
-        href={`https://demo.openseat.com/explorer/tx/${token_data.transactionHash}`}
+        href={`https://demo.openride.com/explorer/tx/${token_data.transactionHash}`}
         className="text-blue-600 hover:underline text-sm"
         target="_blank"
       >
@@ -570,4 +570,4 @@ pip install web3 eth-account
 - Polygon Mumbai: https://mumbai.polygonscan.com/
 
 ---
-**Built for OpenSeat** | **Secure • Scalable • Demo-Ready**
+**Built for OpenRide** | **Secure • Scalable • Demo-Ready**

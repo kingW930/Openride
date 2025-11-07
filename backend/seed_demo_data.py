@@ -253,7 +253,7 @@ def create_test_routes(db, drivers, vehicles):
 def main():
     """Main seeding function"""
     print("=" * 60)
-    print("🌱 OPENSEAT DEMO DATA SEEDER")
+    print("🌱 OPENRIDE DEMO DATA SEEDER")
     print("=" * 60)
     
     # Initialize database

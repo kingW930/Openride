@@ -1,5 +1,5 @@
 """
-OpenSeat FastAPI Backend Application
+OpenRide FastAPI Backend Application
 Main entry point for the API
 """
 from fastapi import FastAPI, Request
@@ -12,8 +12,8 @@ import uvicorn
 from src.config.database import init_db
 from src.config.settings import get_settings
 from src.middleware.error_handler import (
-    OpenSeatException,
-    openseat_exception_handler,
+    OpenRideException,
+    openride_exception_handler,
     validation_exception_handler,
     database_exception_handler,
     general_exception_handler
@@ -33,7 +33,7 @@ settings = get_settings()
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
-    description="OpenSeat - Community-powered micro-ridesharing platform for daily work commutes",
+    description="OpenRide - Community-powered micro-ridesharing platform for daily work commutes",
     docs_url="/api/docs",
     redoc_url="/api/redoc",
     openapi_url="/api/openapi.json"
@@ -49,7 +49,7 @@ app.add_middleware(
 )
 
 # Register exception handlers
-app.add_exception_handler(OpenSeatException, openseat_exception_handler)
+app.add_exception_handler(OpenRideException, openride_exception_handler)
 app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(SQLAlchemyError, database_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
@@ -67,7 +67,7 @@ async def startup_event():
     """
     Initialize database on startup
     """
-    print("🚀 Starting OpenSeat API...")
+    print("🚀 Starting OpenRide API...")
     print(f"📊 Initializing database...")
     init_db()
     print("✅ Database initialized successfully")
@@ -79,7 +79,7 @@ async def root():
     Root endpoint - API health check
     """
     return {
-        "message": "Welcome to OpenSeat API",
+        "message": "Welcome to OpenRide API",
         "version": settings.APP_VERSION,
         "status": "running",
         "docs": "/api/docs"

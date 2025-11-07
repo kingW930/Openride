@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "OpenSeat - Nigerian Rideshare",
+  title: "OpenRide - Nigerian Rideshare",
   description: "Where empty seats meet early-morning peace",
   generator: "v0.app",
   icons: {

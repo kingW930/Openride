@@ -1,5 +1,5 @@
 """
-AI-powered route matching utilities for OpenSeat
+AI-powered route matching utilities for OpenRide
 
 This module implements an intelligent route matching algorithm that considers:
 1. Location similarity (exact match, same area, adjacent areas, same region)

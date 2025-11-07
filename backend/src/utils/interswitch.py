@@ -14,12 +14,12 @@ settings = get_settings()
 
 def generate_transaction_ref(booking_id: str) -> str:
     """
-    Generate unique transaction reference in format: OPENSEAT-{timestamp}-{randomId}
+    Generate unique transaction reference in format: OPENRIDE-{timestamp}-{randomId}
     """
     timestamp = datetime.utcnow().strftime("%Y%m%d%H%M%S")
     random_id = secrets.token_hex(4).upper()
     
-    return f"OPENSEAT-{timestamp}-{random_id}"
+    return f"OPENRIDE-{timestamp}-{random_id}"
 
 
 def convert_to_kobo(amount: float) -> int:
@@ -49,7 +49,7 @@ async def initiate_payment(
     
     Args:
         amount: Amount in Naira
-        transaction_ref: Unique transaction reference (OPENSEAT-timestamp-randomId)
+        transaction_ref: Unique transaction reference (OPENRIDE-timestamp-randomId)
         customer_email: Customer email address
         customer_name: Customer name
     

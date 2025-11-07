@@ -35,7 +35,7 @@ async def create_payment(payment_data: PaymentInitiate, user: User, db: Session)
     
     Steps:
     1. Verify booking exists and belongs to user
-    2. Generate unique transaction reference (OPENSEAT-timestamp-randomId)
+    2. Generate unique transaction reference (OPENRIDE-timestamp-randomId)
     3. Calculate amount in kobo (multiply by 100)
     4. Create payment record in database with PENDING status
     5. Return payment parameters for frontend Interswitch integration
@@ -61,7 +61,7 @@ async def create_payment(payment_data: PaymentInitiate, user: User, db: Session)
     if abs(payment_data.amount - booking.total_amount) > 0.01:
         raise BadRequestException("Payment amount doesn't match booking amount")
     
-    # Generate unique transaction reference: OPENSEAT-{timestamp}-{randomId}
+    # Generate unique transaction reference: OPENRIDE-{timestamp}-{randomId}
     transaction_ref = generate_transaction_ref(str(booking.id))
     
     # Initiate payment with Interswitch

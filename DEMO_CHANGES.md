@@ -9,10 +9,10 @@
 - `backend/src/config/database.py`
   - Added SQLite-specific `check_same_thread=False` 
   - Added database initialization logging
-  - Auto-creates `openseat_demo.db` file
+  - Auto-creates `openride_demo.db` file
 
 - `backend/src/config/settings.py`
-  - Default `DATABASE_URL = "sqlite:///./openseat_demo.db"`
+  - Default `DATABASE_URL = "sqlite:///./openride_demo.db"`
   - Added demo-friendly defaults (JWT secret, Interswitch TEST credentials)
   - Extended token expiry to 24 hours for testing
   - Added CORS for `localhost:5173` (Vite dev server)
@@ -230,7 +230,7 @@ python seed_demo_data.py
 ### Issue: No routes showing
 **Solution:** Check database file exists
 ```bash
-ls openseat_demo.db
+ls openride_demo.db
 # If missing, run seed script
 ```
 
@@ -251,7 +251,7 @@ ls openseat_demo.db
 
 ✨ Created:
    backend/seed_demo_data.py
-   backend/openseat_demo.db (auto-created on first run)
+   backend/openride_demo.db (auto-created on first run)
    DEMO_QUICK_START.md
    DEMO_CHANGES.md (this file)
 

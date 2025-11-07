@@ -8,46 +8,46 @@ from sqlalchemy.exc import SQLAlchemyError
 from typing import Union
 
 
-class OpenSeatException(Exception):
-    """Base exception for OpenSeat application"""
+class OpenRideException(Exception):
+    """Base exception for OpenRide application"""
     def __init__(self, message: str, status_code: int = 400):
         self.message = message
         self.status_code = status_code
         super().__init__(self.message)
 
 
-class NotFoundException(OpenSeatException):
+class NotFoundException(OpenRideException):
     """Raised when a resource is not found"""
     def __init__(self, message: str = "Resource not found"):
         super().__init__(message, status_code=404)
 
 
-class UnauthorizedException(OpenSeatException):
+class UnauthorizedException(OpenRideException):
     """Raised when user is not authorized"""
     def __init__(self, message: str = "Unauthorized"):
         super().__init__(message, status_code=401)
 
 
-class ForbiddenException(OpenSeatException):
+class ForbiddenException(OpenRideException):
     """Raised when user doesn't have permission"""
     def __init__(self, message: str = "Forbidden"):
         super().__init__(message, status_code=403)
 
 
-class BadRequestException(OpenSeatException):
+class BadRequestException(OpenRideException):
     """Raised for bad requests"""
     def __init__(self, message: str = "Bad request"):
         super().__init__(message, status_code=400)
 
 
-class ConflictException(OpenSeatException):
+class ConflictException(OpenRideException):
     """Raised when there's a conflict (e.g., duplicate resource)"""
     def __init__(self, message: str = "Resource conflict"):
         super().__init__(message, status_code=409)
 
 
-async def openseat_exception_handler(request: Request, exc: OpenSeatException):
-    """Handle OpenSeat custom exceptions"""
+async def openride_exception_handler(request: Request, exc: OpenRideException):
+    """Handle OpenRide custom exceptions"""
     return JSONResponse(
         status_code=exc.status_code,
         content={

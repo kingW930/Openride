@@ -1,5 +1,5 @@
 """
-Rating model for OpenSeat platform
+Rating model for OpenRide platform
 """
 from sqlalchemy import Column, String, Integer, Float, DateTime, ForeignKey, Text
 from sqlalchemy.orm import relationship

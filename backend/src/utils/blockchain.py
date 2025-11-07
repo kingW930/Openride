@@ -1,7 +1,7 @@
 """
 Blockchain utilities for booking token generation and verification
 
-This module implements a mock blockchain verification system for the OpenSeat platform.
+This module implements a mock blockchain verification system for the OpenRide platform.
 It simulates blockchain-based booking verification to prevent double booking and fraud.
 
 In production, this would integrate with Polygon Mumbai Testnet or mainnet using:
@@ -89,7 +89,7 @@ def generate_booking_token(
         "rider_id": str(rider_id),
         "amount": amount,
         "timestamp": timestamp.isoformat(),
-        "network": "openseat-demo-blockchain",
+        "network": "openride-demo-blockchain",
         "version": "1.0"
     }
     
@@ -270,7 +270,7 @@ def generate_qr_code_data(token_id: str, booking_id: UUID, timestamp: int) -> st
         "tokenId": token_id,
         "bookingId": str(booking_id),
         "timestamp": timestamp,
-        "platform": "openseat",
+        "platform": "openride",
         "version": "1.0"
     }
     
@@ -317,4 +317,4 @@ def get_explorer_url(transaction_hash: str, network: str = "demo") -> str:
         return f"https://polygonscan.com/tx/{transaction_hash}"
     else:
         # Demo mode - return mock explorer
-        return f"https://demo.openseat.com/explorer/tx/{transaction_hash}"
+        return f"https://demo.openride.com/explorer/tx/{transaction_hash}"
